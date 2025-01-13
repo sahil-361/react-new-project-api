@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18  # Specify the Node.js version to be used (adjust as needed)
+    commands:
+      - echo "Installing dependencies"
+      - npm install --no-optional # Install the dependencies listed in package.json
+
+  post_build:
+    commands:
+      - echo "Running post-build tasks"
+      # npm run test   # Run tests (adjust as necessary)
+
+artifacts:
+  files:
+    - '**/*'             # Include all files
+    - '!**/node_modules/**'  # Exclude node_modules to avoid packaging them
+  discard-paths: no

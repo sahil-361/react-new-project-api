@@ -18,4 +18,4 @@ sudo npm install
 # Start the React app
 sudo npm start  # Or use pm2 to run your React app in the background
 
-sudo cp -r /home/ubuntu/my-api/build/* /var/www/html/my-api/
+sudo cp -r /home/ubuntu/my-api/* /var/www/html/my-api/
