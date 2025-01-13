@@ -1,11 +1,12 @@
 #!/bin/bash
-# Update package list
-sudo apt update -y
+# Navigate to your React app directory
+cd /home/ubuntu/my-api
 
-# Install Nginx (web server)
-sudo apt install -y nginx
+# Install react-scripts (if necessary)
+sudo npm install
 
-# Install Node.js and npm (for React)
-sudo apt install -y nodejs npm
-
-echo "Installing dependencies..."
+# Start the React app
+sudo npm start  # Or use pm2 to run your React app in the background
+nohup node index.js > app.log 2>&1 &  # Start the Node.js app in the background, redirect logs to a file
+sudo mkdir /var/www/my-api
+sudo cp -r /home/ubuntu/my-api/* /var/www/my-api/
