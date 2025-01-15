@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   # The source directory (e.g., build/) from CodeBuild
-  # should be copied to the Apache web server root
+  # should be copied to the Nginx web server root
   - source: /
-    destination: /home/ubuntu/my-api  # Nginx default directory for static content
+    destination: /home/ubuntu/my-api 
 
 hooks:
   # BeforeInstall - Clean the previous application if needed
